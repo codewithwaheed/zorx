@@ -1,0 +1,53 @@
+{
+  "name": "zrox-react",
+  "version": "1.0.0",
+  "description": "A react state management library'",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithwaheed/zorx.git"
+  },
+  "keywords": [
+    "react",
+    "state",
+    "zorx",
+    "management",
+    "global",
+    "redux",
+    "mobx"
+  ],
+  "author": "Waheed Ahmed <codewithwaheed2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codewithwaheed/zorx/issues"
+  },
+  "homepage": "https://github.com/codewithwaheed/zorx#readme",
+  "files": [
+    "dist",
+    "distTypes"
+  ],
+  "main": "./dist/zrox.umd.cjs",
+  "module": "./dist/zrox.js",
+  "exports": {
+    ".": {
+      "import": "./dist/zrox.js",
+      "require": "./dist/zrox.umd.cjs"
+    }
+  },
+  "types": "./distTypes/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.2.75",
+    "@vitejs/plugin-react": "^4.2.1",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
