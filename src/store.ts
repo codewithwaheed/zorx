@@ -1,8 +1,6 @@
-import { useSyncExternalStore } from "react";
-
 export type Listener = () => void;
 
-function createStore<T>({
+export function createStore<T>({
   initialState,
   key,
 }: {
@@ -60,13 +58,4 @@ function createStore<T>({
       persistState(state);
     },
   };
-}
-
-export function createUseStore<T>(initialState: T, key?: string) {
-  const store = createStore({ initialState, key });
-  return () =>
-    [
-      useSyncExternalStore(store.subscribe, store.getSnapshot),
-      store.setState,
-    ] as const;
 }
