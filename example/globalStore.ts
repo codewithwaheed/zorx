@@ -1,5 +1,5 @@
 // globalStore.ts
-import { createUseStore } from "../src/store";
+import { createUseStore } from "../src";
 
 export const useCountStore = createUseStore<number>(0, "countState"); // Persist count as a number
 
